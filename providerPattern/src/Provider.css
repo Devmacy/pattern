@@ -1,0 +1,10 @@
+.main-container{
+    background: #535bf2;
+    color: #f9f9f9;
+    display: flex;
+}
+
+.list-item{
+    display: flex;
+    flex-direction: column;
+}
