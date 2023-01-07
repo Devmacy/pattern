@@ -1,4 +1,4 @@
-import useThemeContext from "./Hooks/useTheme.js";
+import useThemeContext from "../Hooks/useTheme.js";
 
 export default function ListItem() {
     const {currentTheme} = useThemeContext()
