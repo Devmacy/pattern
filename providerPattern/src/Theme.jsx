@@ -19,18 +19,14 @@ const themes = {
 function Theme() {
     const [theme, setTheme] = useState('light')
 
-    const providerValue = {
-        theme:themes[theme],
-        toggleTheme
-    }
-
-    function toggleTheme() {
-        setTheme(theme === 'dark' ? 'light' : 'dark')
-    }
-
     return (
         <div className={`App theme-${theme}`}>
-            <ThemeContext.Provider value={providerValue}>
+            <ThemeContext.Provider value={{
+                currentTheme:themes[theme],
+                toggleTheme() {
+                    setTheme(theme === 'dark' ? 'light' : 'dark')
+                }
+            }}>
                 <Toggle/>
                 <List/>
             </ThemeContext.Provider>

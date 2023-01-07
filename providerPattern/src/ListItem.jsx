@@ -1,11 +1,10 @@
-import {useContext} from "react";
-import {ThemeContext} from "./Theme";
+import useThemeContext from "./Hooks/useTheme.js";
 
 export default function ListItem() {
-    const theme = useContext(ThemeContext)
+    const {currentTheme} = useThemeContext()
 
     return (
-        <li style={theme.theme}>
+        <li style={currentTheme}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
